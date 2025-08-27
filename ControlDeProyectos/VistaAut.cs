@@ -80,7 +80,9 @@ namespace ControlDeProyectos
             {
                 if (autenticarUsuario.IniciarSesion(usuario, contrasena))
                 {
-                    MessageBox.Show("Inicio Correctamente");
+                    VistaInicio vista = new VistaInicio();
+                    vista.Show();
+                    this.Hide();
                 }
                 else
                 {

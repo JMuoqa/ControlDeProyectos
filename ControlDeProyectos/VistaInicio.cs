@@ -1,0 +1,85 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ControlDeProyectos
+{
+    public partial class VistaInicio : Form
+    {
+        public VistaInicio()
+        {
+            InitializeComponent();
+            OcultarSubMenus();
+        }
+        private void OcultarSubMenus()
+        {
+            panelSubMenuAdministrar.Visible = false;
+        }
+
+        private void ActualizarSubMenus()
+        {
+            if (panelSubMenuAdministrar.Visible == true)
+                panelSubMenuAdministrar.Visible = false;
+        }
+
+        private void AbrirSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                ActualizarSubMenus();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
+        }
+        private void boton_administrar_Click(object sender, EventArgs e)
+        {
+            AbrirSubMenu(panelSubMenuAdministrar);
+        }
+        #region SubMenuAdministrar
+        private void boton_agregar_Click(object sender, EventArgs e)
+        {
+            AgregarProyecto agregarProyecto = new(); // Es lo mismo que: "= new AgregarProyecto();" 
+            CambiarFormulario(agregarProyecto);
+
+            //Arriba de esto iria codigo
+            ActualizarSubMenus();
+        }
+
+        private void boton_editar_Click(object sender, EventArgs e)
+        {
+            EditarProyecto editarProyecto = new EditarProyecto();
+            CambiarFormulario(editarProyecto);
+            //Arriba de esto iria codigo
+            ActualizarSubMenus();
+        }
+
+        private void boton_error_Click(object sender, EventArgs e)
+        {
+            //Arriba de esto iria codigo
+            ActualizarSubMenus();
+        }
+        #endregion
+        private Form formularioActivo = null;
+        private void CambiarFormulario(Form formularioHijo)
+        {
+            formularioActivo?.Close(); //Es lo mismo que: if(formularioActivo != null) { formularioActivo.Close() }
+            formularioActivo = formularioHijo;
+            formularioHijo.TopLevel = false;
+            formularioHijo.FormBorderStyle = FormBorderStyle.None;
+            formularioHijo.Dock = DockStyle.Fill;
+            panelHijo.Controls.Add(formularioHijo);
+            panelHijo.Tag = formularioActivo;
+            formularioHijo.BringToFront();
+            formularioHijo.Show();
+        }
+    }
+}

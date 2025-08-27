@@ -133,6 +133,7 @@
             boton_confirmar.FlatAppearance.MouseDownBackColor = Color.FromArgb(204, 109, 0);
             boton_confirmar.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 149, 0);
             boton_confirmar.FlatStyle = FlatStyle.Flat;
+            boton_confirmar.Font = new Font("Montserrat", 10F);
             boton_confirmar.ForeColor = Color.White;
             boton_confirmar.Location = new Point(614, 264);
             boton_confirmar.Name = "boton_confirmar";
