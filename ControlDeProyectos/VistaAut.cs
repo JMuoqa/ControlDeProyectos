@@ -1,5 +1,6 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
+using Dominio;
 namespace ControlDeProyectos
 {
     public partial class autenticacion_principal : Form
@@ -67,6 +68,42 @@ namespace ControlDeProyectos
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void boton_confirmar_Click(object sender, EventArgs e)
+        {
+            AutenticarUsuario autenticarUsuario = new AutenticarUsuario();
+            string usuario = entrada_usuario.Text;
+            string contrasena = entrada_pass.Text;
+            bool badnera = ComprobarDatosVacios(usuario, contrasena);
+            if (badnera)
+            {
+                if (autenticarUsuario.IniciarSesion(usuario, contrasena))
+                {
+                    MessageBox.Show("Inicio Correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña erroneos");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hay datos vacios. Llenalos para continuar");
+            }
+        }
+
+        private bool ComprobarDatosVacios(string usuario, string contrasena)
+        {
+            
+            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasena)){
+                return false;
+            }
+            else if(usuario == "USUARIO" || contrasena == "CONTRASEÑA")
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

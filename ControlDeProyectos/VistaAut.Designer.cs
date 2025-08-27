@@ -140,6 +140,7 @@
             boton_confirmar.TabIndex = 3;
             boton_confirmar.Text = "CONFIRMAR";
             boton_confirmar.UseVisualStyleBackColor = false;
+            boton_confirmar.Click += boton_confirmar_Click;
             // 
             // link_olvidaste
             // 
