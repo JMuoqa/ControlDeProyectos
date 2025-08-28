@@ -7,6 +7,9 @@
     <Compile Update="EditarProyecto.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="RegistrarError.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="VistaAut.cs">
       <SubType>Form</SubType>
     </Compile>

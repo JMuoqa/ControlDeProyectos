@@ -93,26 +93,27 @@ namespace ControlDeProyectos
                     };
                     vista.Show();
                     ResetearTextos();
+                    errorProvider1.Clear();
                 }
                 else
                 {
-                    MessageBox.Show("Usuario o contraseña erroneos");
+                    errorProvider1.Clear();
+                    errorProvider1.SetError(entrada_usuario, "Usuario o contraseña erroneos");
+                    errorProvider1.SetError(entrada_pass, "Usuario o contraseña erroneos");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Hay datos vacios. Llenalos para continuar");
             }
         }
         private bool ComprobarDatosVacios(string usuario, string contrasena)
         {
-
-            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasena))
+            errorProvider1.Clear();
+            if (string.IsNullOrEmpty(usuario) || usuario == "USUARIO")
             {
+                errorProvider1.SetError(entrada_usuario, "El usuario no puede estar vacio");
                 return false;
             }
-            else if (usuario == "USUARIO" || contrasena == "CONTRASEÑA")
+            if (string.IsNullOrEmpty(usuario) || contrasena == "CONTRASEÑA")
             {
+                errorProvider1.SetError(entrada_pass, "La contraseña no puede estar vacia");
                 return false;
             }
             return true;

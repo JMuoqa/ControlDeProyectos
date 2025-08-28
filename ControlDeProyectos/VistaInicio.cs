@@ -20,12 +20,15 @@ namespace ControlDeProyectos
         private void OcultarSubMenus()
         {
             panelSubMenuAdministrar.Visible = false;
+            panelSubMenuBusquedas.Visible = false;
         }
 
         private void ActualizarSubMenus()
         {
             if (panelSubMenuAdministrar.Visible == true)
                 panelSubMenuAdministrar.Visible = false;
+            if (panelSubMenuBusquedas.Visible == true)
+                panelSubMenuBusquedas.Visible = false;
         }
 
         private void AbrirSubMenu(Panel subMenu)
@@ -44,12 +47,15 @@ namespace ControlDeProyectos
         {
             AbrirSubMenu(panelSubMenuAdministrar);
         }
+        private void boton_busqueda_Click(object sender, EventArgs e)
+        {
+            AbrirSubMenu(panelSubMenuBusquedas);
+        }
         #region SubMenuAdministrar
         private void boton_agregar_Click(object sender, EventArgs e)
         {
             AgregarProyecto agregarProyecto = new(); // Es lo mismo que: "= new AgregarProyecto();" 
             CambiarFormulario(agregarProyecto);
-
             //Arriba de esto iria codigo
             ActualizarSubMenus();
         }
@@ -61,9 +67,10 @@ namespace ControlDeProyectos
             //Arriba de esto iria codigo
             ActualizarSubMenus();
         }
-
         private void boton_error_Click(object sender, EventArgs e)
         {
+            RegistrarError registrarError = new RegistrarError();
+            CambiarFormulario(registrarError);
             //Arriba de esto iria codigo
             ActualizarSubMenus();
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(autenticacion_principal));
             panel_logo = new Panel();
             logo = new PictureBox();
@@ -40,10 +41,12 @@
             link_olvidaste = new LinkLabel();
             cerrar_app = new PictureBox();
             minimizar_app = new PictureBox();
+            errorProvider1 = new ErrorProvider(components);
             panel_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cerrar_app).BeginInit();
             ((System.ComponentModel.ISupportInitialize)minimizar_app).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // panel_logo
@@ -137,7 +140,7 @@
             boton_confirmar.FlatStyle = FlatStyle.Flat;
             boton_confirmar.Font = new Font("Montserrat", 14.25F, FontStyle.Bold);
             boton_confirmar.ForeColor = Color.FromArgb(0, 0, 23);
-            boton_confirmar.Location = new Point(614, 264);
+            boton_confirmar.Location = new Point(614, 296);
             boton_confirmar.Name = "boton_confirmar";
             boton_confirmar.Size = new Size(400, 40);
             boton_confirmar.TabIndex = 3;
@@ -149,7 +152,7 @@
             // 
             link_olvidaste.AutoSize = true;
             link_olvidaste.LinkColor = Color.White;
-            link_olvidaste.Location = new Point(745, 316);
+            link_olvidaste.Location = new Point(745, 348);
             link_olvidaste.Name = "link_olvidaste";
             link_olvidaste.Size = new Size(139, 15);
             link_olvidaste.TabIndex = 0;
@@ -180,6 +183,10 @@
             minimizar_app.TabStop = false;
             minimizar_app.Click += minimizar_app_Click;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // autenticacion_principal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -207,6 +214,7 @@
             ((System.ComponentModel.ISupportInitialize)logo).EndInit();
             ((System.ComponentModel.ISupportInitialize)cerrar_app).EndInit();
             ((System.ComponentModel.ISupportInitialize)minimizar_app).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -224,5 +232,6 @@
         private PictureBox logo;
         private PictureBox cerrar_app;
         private PictureBox minimizar_app;
+        private ErrorProvider errorProvider1;
     }
 }
