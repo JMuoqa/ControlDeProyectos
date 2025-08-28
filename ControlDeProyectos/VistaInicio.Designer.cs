@@ -37,17 +37,17 @@
             boton_agregar = new Button();
             boton_administrar = new Button();
             panelSubMenuLogo = new Panel();
+            pictureBox2 = new PictureBox();
+            label1 = new Label();
             lineaDivisoria = new Panel();
             panelHijo = new Panel();
             pictureBox1 = new PictureBox();
-            label1 = new Label();
-            pictureBox2 = new PictureBox();
             menu_lateral.SuspendLayout();
             panelSubMenuAdministrar.SuspendLayout();
             panelSubMenuLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelHijo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // menu_lateral
@@ -61,7 +61,7 @@
             menu_lateral.Dock = DockStyle.Left;
             menu_lateral.Location = new Point(0, 0);
             menu_lateral.Name = "menu_lateral";
-            menu_lateral.Size = new Size(250, 716);
+            menu_lateral.Size = new Size(250, 811);
             menu_lateral.TabIndex = 0;
             // 
             // panel1
@@ -98,7 +98,7 @@
             boton_error.Name = "boton_error";
             boton_error.Padding = new Padding(35, 0, 0, 0);
             boton_error.Size = new Size(250, 40);
-            boton_error.TabIndex = 2;
+            boton_error.TabIndex = 7;
             boton_error.Text = "Registrar error";
             boton_error.TextAlign = ContentAlignment.MiddleLeft;
             boton_error.UseVisualStyleBackColor = true;
@@ -117,7 +117,7 @@
             boton_editar.Name = "boton_editar";
             boton_editar.Padding = new Padding(35, 0, 0, 0);
             boton_editar.Size = new Size(250, 40);
-            boton_editar.TabIndex = 1;
+            boton_editar.TabIndex = 6;
             boton_editar.Text = "Editar proyecto";
             boton_editar.TextAlign = ContentAlignment.MiddleLeft;
             boton_editar.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@
             boton_agregar.Name = "boton_agregar";
             boton_agregar.Padding = new Padding(35, 0, 0, 0);
             boton_agregar.Size = new Size(250, 40);
-            boton_agregar.TabIndex = 0;
+            boton_agregar.TabIndex = 5;
             boton_agregar.Text = "Agregar proyecto";
             boton_agregar.TextAlign = ContentAlignment.MiddleLeft;
             boton_agregar.UseVisualStyleBackColor = true;
@@ -155,7 +155,7 @@
             boton_administrar.Name = "boton_administrar";
             boton_administrar.Padding = new Padding(10, 0, 0, 0);
             boton_administrar.Size = new Size(250, 45);
-            boton_administrar.TabIndex = 1;
+            boton_administrar.TabIndex = 4;
             boton_administrar.Text = "Administrar";
             boton_administrar.TextAlign = ContentAlignment.MiddleLeft;
             boton_administrar.UseVisualStyleBackColor = true;
@@ -171,6 +171,28 @@
             panelSubMenuLogo.Name = "panelSubMenuLogo";
             panelSubMenuLogo.Size = new Size(250, 111);
             panelSubMenuLogo.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Anchor = AnchorStyles.None;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(16, 30);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(54, 55);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Montserrat", 30F, FontStyle.Bold);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(76, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(168, 55);
+            label1.TabIndex = 4;
+            label1.Text = "Muoqa";
             // 
             // lineaDivisoria
             // 
@@ -188,60 +210,39 @@
             panelHijo.Dock = DockStyle.Fill;
             panelHijo.Location = new Point(250, 0);
             panelHijo.Name = "panelHijo";
-            panelHijo.Size = new Size(1014, 716);
+            panelHijo.Size = new Size(1014, 811);
             panelHijo.TabIndex = 1;
             // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(314, 141);
+            pictureBox1.Location = new Point(314, 188);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(400, 400);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Montserrat", 30F, FontStyle.Bold);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(76, 30);
-            label1.Name = "label1";
-            label1.Size = new Size(168, 55);
-            label1.TabIndex = 4;
-            label1.Text = "Muoqa";
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Anchor = AnchorStyles.None;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(16, 30);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(54, 55);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
-            // 
             // VistaInicio
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1264, 716);
+            ClientSize = new Size(1264, 811);
             Controls.Add(panelHijo);
             Controls.Add(menu_lateral);
             Font = new Font("Montserrat", 10F);
-            MinimumSize = new Size(950, 600);
+            MinimumSize = new Size(1100, 750);
             Name = "VistaInicio";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "VistaInicio";
             menu_lateral.ResumeLayout(false);
             panelSubMenuAdministrar.ResumeLayout(false);
             panelSubMenuLogo.ResumeLayout(false);
             panelSubMenuLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panelHijo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 

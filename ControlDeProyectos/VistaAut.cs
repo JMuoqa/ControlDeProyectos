@@ -72,6 +72,10 @@ namespace ControlDeProyectos
 
         private void boton_confirmar_Click(object sender, EventArgs e)
         {
+            IniciarApp();
+        }
+        private void IniciarApp()
+        {
             AutenticarUsuario autenticarUsuario = new AutenticarUsuario();
             string usuario = entrada_usuario.Text;
             string contrasena = entrada_pass.Text;
@@ -81,8 +85,14 @@ namespace ControlDeProyectos
                 if (autenticarUsuario.IniciarSesion(usuario, contrasena))
                 {
                     VistaInicio vista = new VistaInicio();
-                    vista.Show();
                     this.Hide();
+                    // Suscribimos al evento FormClosed. Agregue esto por que cuando se cerraba la VistaInicio el programa no terminaba
+                    vista.FormClosed += (s, args) =>
+                    {
+                        this.Show(); // Cuando el principal se cierra, mostramos el login otra vez
+                    };
+                    vista.Show();
+                    ResetearTextos();
                 }
                 else
                 {
@@ -94,18 +104,34 @@ namespace ControlDeProyectos
                 MessageBox.Show("Hay datos vacios. Llenalos para continuar");
             }
         }
-
         private bool ComprobarDatosVacios(string usuario, string contrasena)
         {
-            
-            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasena)){
+
+            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contrasena))
+            {
                 return false;
             }
-            else if(usuario == "USUARIO" || contrasena == "CONTRASEÑA")
+            else if (usuario == "USUARIO" || contrasena == "CONTRASEÑA")
             {
                 return false;
             }
             return true;
+        }
+        private void ResetearTextos()
+        {
+            entrada_usuario.Text = "USUARIO";
+            entrada_usuario.ForeColor = Color.FromArgb(144, 144, 144);
+            entrada_pass.Text = "CONTRASEÑA";
+            entrada_pass.ForeColor = Color.FromArgb(144, 144, 144);
+            entrada_pass.UseSystemPasswordChar = false;
+        }
+
+        private void Entradas_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                IniciarApp();
+            }
         }
     }
 }

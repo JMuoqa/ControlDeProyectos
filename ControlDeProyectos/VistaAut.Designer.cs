@@ -89,6 +89,7 @@
             entrada_usuario.TabIndex = 1;
             entrada_usuario.Text = "USUARIO";
             entrada_usuario.Enter += entrada_usuario_Enter;
+            entrada_usuario.KeyDown += Entradas_KeyDown;
             entrada_usuario.Leave += entrada_usuario_Leave;
             // 
             // entrada_pass
@@ -103,6 +104,7 @@
             entrada_pass.TabIndex = 2;
             entrada_pass.Text = "CONTRASEÑA";
             entrada_pass.Enter += entrada_pass_Enter;
+            entrada_pass.KeyDown += Entradas_KeyDown;
             entrada_pass.Leave += entrada_pass_Leave;
             // 
             // linea_pass
@@ -127,19 +129,19 @@
             // 
             // boton_confirmar
             // 
-            boton_confirmar.BackColor = Color.FromArgb(40, 40, 40);
+            boton_confirmar.BackColor = Color.FromArgb(242, 225, 199);
             boton_confirmar.Cursor = Cursors.Hand;
             boton_confirmar.FlatAppearance.BorderSize = 0;
             boton_confirmar.FlatAppearance.MouseDownBackColor = Color.FromArgb(204, 109, 0);
             boton_confirmar.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 149, 0);
             boton_confirmar.FlatStyle = FlatStyle.Flat;
-            boton_confirmar.Font = new Font("Montserrat", 10F);
-            boton_confirmar.ForeColor = Color.White;
+            boton_confirmar.Font = new Font("Montserrat", 14.25F, FontStyle.Bold);
+            boton_confirmar.ForeColor = Color.FromArgb(0, 0, 23);
             boton_confirmar.Location = new Point(614, 264);
             boton_confirmar.Name = "boton_confirmar";
             boton_confirmar.Size = new Size(400, 40);
             boton_confirmar.TabIndex = 3;
-            boton_confirmar.Text = "CONFIRMAR";
+            boton_confirmar.Text = "Confirmar";
             boton_confirmar.UseVisualStyleBackColor = false;
             boton_confirmar.Click += boton_confirmar_Click;
             // 
