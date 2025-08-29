@@ -132,11 +132,11 @@
             // 
             // boton_confirmar
             // 
-            boton_confirmar.BackColor = Color.FromArgb(242, 225, 199);
+            boton_confirmar.BackColor = Color.FromArgb(222, 205, 179);
             boton_confirmar.Cursor = Cursors.Hand;
             boton_confirmar.FlatAppearance.BorderSize = 0;
-            boton_confirmar.FlatAppearance.MouseDownBackColor = Color.FromArgb(204, 109, 0);
-            boton_confirmar.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 149, 0);
+            boton_confirmar.FlatAppearance.MouseDownBackColor = Color.FromArgb(212, 195, 169);
+            boton_confirmar.FlatAppearance.MouseOverBackColor = Color.FromArgb(232, 215, 189);
             boton_confirmar.FlatStyle = FlatStyle.Flat;
             boton_confirmar.Font = new Font("Montserrat", 14.25F, FontStyle.Bold);
             boton_confirmar.ForeColor = Color.FromArgb(0, 0, 23);

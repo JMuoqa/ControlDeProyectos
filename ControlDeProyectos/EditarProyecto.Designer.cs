@@ -61,12 +61,12 @@
             linea_id = new Panel();
             entrada_id = new TextBox();
             etiqueta_buscar = new Label();
-            boton_confirmar = new Button();
-            boton_vaciar = new Button();
             boton_buscar = new Button();
             label2 = new Label();
             label3 = new Label();
             panel_pie = new Panel();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // linea_pago
@@ -74,7 +74,7 @@
             linea_pago.Anchor = AnchorStyles.Top;
             linea_pago.BackColor = Color.FromArgb(0, 0, 32);
             linea_pago.Enabled = false;
-            linea_pago.Location = new Point(476, 708);
+            linea_pago.Location = new Point(460, 708);
             linea_pago.Margin = new Padding(3, 3, 3, 10);
             linea_pago.Name = "linea_pago";
             linea_pago.Size = new Size(319, 1);
@@ -87,7 +87,7 @@
             entrada_pago.BorderStyle = BorderStyle.None;
             entrada_pago.Font = new Font("Montserrat", 15F);
             entrada_pago.ForeColor = Color.FromArgb(144, 144, 144);
-            entrada_pago.Location = new Point(476, 679);
+            entrada_pago.Location = new Point(460, 679);
             entrada_pago.Name = "entrada_pago";
             entrada_pago.Size = new Size(319, 25);
             entrada_pago.TabIndex = 133;
@@ -100,7 +100,7 @@
             linea_precio.Anchor = AnchorStyles.Top;
             linea_precio.BackColor = Color.FromArgb(0, 0, 32);
             linea_precio.Enabled = false;
-            linea_precio.Location = new Point(476, 638);
+            linea_precio.Location = new Point(460, 638);
             linea_precio.Margin = new Padding(3, 3, 3, 10);
             linea_precio.Name = "linea_precio";
             linea_precio.Size = new Size(319, 1);
@@ -113,7 +113,7 @@
             entrada_precio.BorderStyle = BorderStyle.None;
             entrada_precio.Font = new Font("Montserrat", 15F);
             entrada_precio.ForeColor = Color.FromArgb(144, 144, 144);
-            entrada_precio.Location = new Point(476, 609);
+            entrada_precio.Location = new Point(460, 609);
             entrada_precio.Name = "entrada_precio";
             entrada_precio.Size = new Size(319, 25);
             entrada_precio.TabIndex = 132;
@@ -126,7 +126,7 @@
             linea_inf_funciones.Anchor = AnchorStyles.Top;
             linea_inf_funciones.BackColor = Color.FromArgb(0, 0, 32);
             linea_inf_funciones.Enabled = false;
-            linea_inf_funciones.Location = new Point(476, 568);
+            linea_inf_funciones.Location = new Point(460, 568);
             linea_inf_funciones.Margin = new Padding(3, 3, 3, 10);
             linea_inf_funciones.Name = "linea_inf_funciones";
             linea_inf_funciones.Size = new Size(319, 1);
@@ -137,7 +137,7 @@
             linea_sup_funciones.Anchor = AnchorStyles.Top;
             linea_sup_funciones.BackColor = Color.FromArgb(0, 0, 32);
             linea_sup_funciones.Enabled = false;
-            linea_sup_funciones.Location = new Point(476, 411);
+            linea_sup_funciones.Location = new Point(460, 411);
             linea_sup_funciones.Margin = new Padding(3, 3, 3, 10);
             linea_sup_funciones.Name = "linea_sup_funciones";
             linea_sup_funciones.Size = new Size(319, 1);
@@ -150,7 +150,7 @@
             entrada_funciones.BorderStyle = BorderStyle.None;
             entrada_funciones.Font = new Font("Montserrat", 15F);
             entrada_funciones.ForeColor = Color.White;
-            entrada_funciones.Location = new Point(476, 418);
+            entrada_funciones.Location = new Point(460, 418);
             entrada_funciones.MaxLength = 250;
             entrada_funciones.Name = "entrada_funciones";
             entrada_funciones.Size = new Size(319, 147);
@@ -162,7 +162,7 @@
             linea_entrega.Anchor = AnchorStyles.Top;
             linea_entrega.BackColor = Color.FromArgb(0, 0, 32);
             linea_entrega.Enabled = false;
-            linea_entrega.Location = new Point(476, 361);
+            linea_entrega.Location = new Point(460, 361);
             linea_entrega.Margin = new Padding(3, 3, 3, 10);
             linea_entrega.Name = "linea_entrega";
             linea_entrega.Size = new Size(319, 1);
@@ -175,7 +175,7 @@
             entrada_entrega.BorderStyle = BorderStyle.None;
             entrada_entrega.Font = new Font("Montserrat", 15F);
             entrada_entrega.ForeColor = Color.FromArgb(144, 144, 144);
-            entrada_entrega.Location = new Point(476, 332);
+            entrada_entrega.Location = new Point(460, 332);
             entrada_entrega.Name = "entrada_entrega";
             entrada_entrega.Size = new Size(319, 25);
             entrada_entrega.TabIndex = 128;
@@ -188,7 +188,7 @@
             linea_inicio.Anchor = AnchorStyles.Top;
             linea_inicio.BackColor = Color.FromArgb(0, 0, 32);
             linea_inicio.Enabled = false;
-            linea_inicio.Location = new Point(476, 291);
+            linea_inicio.Location = new Point(460, 291);
             linea_inicio.Margin = new Padding(3, 3, 3, 10);
             linea_inicio.Name = "linea_inicio";
             linea_inicio.Size = new Size(319, 1);
@@ -201,7 +201,7 @@
             entrada_inicio.BorderStyle = BorderStyle.None;
             entrada_inicio.Font = new Font("Montserrat", 15F);
             entrada_inicio.ForeColor = Color.FromArgb(144, 144, 144);
-            entrada_inicio.Location = new Point(476, 262);
+            entrada_inicio.Location = new Point(460, 262);
             entrada_inicio.Name = "entrada_inicio";
             entrada_inicio.Size = new Size(319, 25);
             entrada_inicio.TabIndex = 126;
@@ -218,7 +218,7 @@
             entrada_tipo.ForeColor = Color.White;
             entrada_tipo.FormattingEnabled = true;
             entrada_tipo.Items.AddRange(new object[] { "Pagian Web", "Aplicacion de escritorio" });
-            entrada_tipo.Location = new Point(86, 702);
+            entrada_tipo.Location = new Point(70, 702);
             entrada_tipo.Name = "entrada_tipo";
             entrada_tipo.Size = new Size(319, 35);
             entrada_tipo.TabIndex = 125;
@@ -230,7 +230,7 @@
             linea_tipo.Anchor = AnchorStyles.Top;
             linea_tipo.BackColor = Color.FromArgb(0, 0, 32);
             linea_tipo.Enabled = false;
-            linea_tipo.Location = new Point(86, 741);
+            linea_tipo.Location = new Point(70, 741);
             linea_tipo.Margin = new Padding(3, 3, 3, 10);
             linea_tipo.Name = "linea_tipo";
             linea_tipo.Size = new Size(319, 1);
@@ -241,7 +241,7 @@
             linea_descripcion2.Anchor = AnchorStyles.Top;
             linea_descripcion2.BackColor = Color.FromArgb(0, 0, 32);
             linea_descripcion2.Enabled = false;
-            linea_descripcion2.Location = new Point(86, 661);
+            linea_descripcion2.Location = new Point(70, 661);
             linea_descripcion2.Margin = new Padding(3, 3, 3, 10);
             linea_descripcion2.Name = "linea_descripcion2";
             linea_descripcion2.Size = new Size(319, 1);
@@ -252,7 +252,7 @@
             linea_descripcion.Anchor = AnchorStyles.Top;
             linea_descripcion.BackColor = Color.FromArgb(0, 0, 32);
             linea_descripcion.Enabled = false;
-            linea_descripcion.Location = new Point(86, 411);
+            linea_descripcion.Location = new Point(70, 411);
             linea_descripcion.Margin = new Padding(3, 3, 3, 10);
             linea_descripcion.Name = "linea_descripcion";
             linea_descripcion.Size = new Size(319, 1);
@@ -265,7 +265,7 @@
             entrada_descripcion.BorderStyle = BorderStyle.None;
             entrada_descripcion.Font = new Font("Montserrat", 15F);
             entrada_descripcion.ForeColor = Color.White;
-            entrada_descripcion.Location = new Point(86, 418);
+            entrada_descripcion.Location = new Point(70, 418);
             entrada_descripcion.MaxLength = 350;
             entrada_descripcion.Name = "entrada_descripcion";
             entrada_descripcion.Size = new Size(319, 240);
@@ -277,7 +277,7 @@
             linea_proyecto.Anchor = AnchorStyles.Top;
             linea_proyecto.BackColor = Color.FromArgb(0, 0, 32);
             linea_proyecto.Enabled = false;
-            linea_proyecto.Location = new Point(86, 361);
+            linea_proyecto.Location = new Point(70, 361);
             linea_proyecto.Margin = new Padding(3, 3, 3, 10);
             linea_proyecto.Name = "linea_proyecto";
             linea_proyecto.Size = new Size(319, 1);
@@ -290,7 +290,7 @@
             entrada_proyecto.BorderStyle = BorderStyle.None;
             entrada_proyecto.Font = new Font("Montserrat", 15F);
             entrada_proyecto.ForeColor = Color.FromArgb(144, 144, 144);
-            entrada_proyecto.Location = new Point(86, 332);
+            entrada_proyecto.Location = new Point(70, 332);
             entrada_proyecto.Name = "entrada_proyecto";
             entrada_proyecto.Size = new Size(319, 25);
             entrada_proyecto.TabIndex = 121;
@@ -303,7 +303,7 @@
             linea_cliente.Anchor = AnchorStyles.Top;
             linea_cliente.BackColor = Color.FromArgb(0, 0, 32);
             linea_cliente.Enabled = false;
-            linea_cliente.Location = new Point(86, 291);
+            linea_cliente.Location = new Point(70, 291);
             linea_cliente.Margin = new Padding(3, 3, 3, 10);
             linea_cliente.Name = "linea_cliente";
             linea_cliente.Size = new Size(319, 1);
@@ -316,7 +316,7 @@
             entrada_cliente.BorderStyle = BorderStyle.None;
             entrada_cliente.Font = new Font("Montserrat", 15F);
             entrada_cliente.ForeColor = Color.FromArgb(144, 144, 144);
-            entrada_cliente.Location = new Point(86, 262);
+            entrada_cliente.Location = new Point(70, 262);
             entrada_cliente.Name = "entrada_cliente";
             entrada_cliente.Size = new Size(319, 25);
             entrada_cliente.TabIndex = 119;
@@ -330,7 +330,7 @@
             etiqueta_entrada.AutoSize = true;
             etiqueta_entrada.Font = new Font("Montserrat Medium", 15F, FontStyle.Bold);
             etiqueta_entrada.ForeColor = Color.Black;
-            etiqueta_entrada.Location = new Point(476, 372);
+            etiqueta_entrada.Location = new Point(460, 372);
             etiqueta_entrada.Name = "etiqueta_entrada";
             etiqueta_entrada.Size = new Size(341, 27);
             etiqueta_entrada.TabIndex = 131;
@@ -342,7 +342,7 @@
             etiqueta_tipo.AutoSize = true;
             etiqueta_tipo.Font = new Font("Montserrat Medium", 15F, FontStyle.Bold);
             etiqueta_tipo.ForeColor = Color.Black;
-            etiqueta_tipo.Location = new Point(86, 672);
+            etiqueta_tipo.Location = new Point(70, 672);
             etiqueta_tipo.Name = "etiqueta_tipo";
             etiqueta_tipo.Size = new Size(199, 27);
             etiqueta_tipo.TabIndex = 129;
@@ -355,7 +355,7 @@
             etiqueta_cobro.AutoSize = true;
             etiqueta_cobro.Font = new Font("Montserrat Medium", 15F, FontStyle.Bold);
             etiqueta_cobro.ForeColor = Color.Black;
-            etiqueta_cobro.Location = new Point(476, 649);
+            etiqueta_cobro.Location = new Point(460, 649);
             etiqueta_cobro.Name = "etiqueta_cobro";
             etiqueta_cobro.Size = new Size(192, 27);
             etiqueta_cobro.TabIndex = 127;
@@ -367,7 +367,7 @@
             etiqueta_precio.AutoSize = true;
             etiqueta_precio.Font = new Font("Montserrat Medium", 15F, FontStyle.Bold);
             etiqueta_precio.ForeColor = Color.Black;
-            etiqueta_precio.Location = new Point(476, 579);
+            etiqueta_precio.Location = new Point(460, 579);
             etiqueta_precio.Name = "etiqueta_precio";
             etiqueta_precio.Size = new Size(82, 27);
             etiqueta_precio.TabIndex = 124;
@@ -379,7 +379,7 @@
             etiqueta_entrega.AutoSize = true;
             etiqueta_entrega.Font = new Font("Montserrat Medium", 15F, FontStyle.Bold);
             etiqueta_entrega.ForeColor = Color.Black;
-            etiqueta_entrega.Location = new Point(476, 302);
+            etiqueta_entrega.Location = new Point(460, 302);
             etiqueta_entrega.Name = "etiqueta_entrega";
             etiqueta_entrega.Size = new Size(315, 27);
             etiqueta_entrega.TabIndex = 122;
@@ -391,7 +391,7 @@
             etiqueta_inicio.AutoSize = true;
             etiqueta_inicio.Font = new Font("Montserrat Medium", 15F, FontStyle.Bold);
             etiqueta_inicio.ForeColor = Color.Black;
-            etiqueta_inicio.Location = new Point(476, 232);
+            etiqueta_inicio.Location = new Point(460, 232);
             etiqueta_inicio.Name = "etiqueta_inicio";
             etiqueta_inicio.Size = new Size(181, 27);
             etiqueta_inicio.TabIndex = 120;
@@ -404,7 +404,7 @@
             etiqueta_descripcion.Font = new Font("Montserrat Medium", 15F, FontStyle.Bold);
             etiqueta_descripcion.ForeColor = Color.Black;
             etiqueta_descripcion.ImageAlign = ContentAlignment.MiddleLeft;
-            etiqueta_descripcion.Location = new Point(86, 372);
+            etiqueta_descripcion.Location = new Point(70, 372);
             etiqueta_descripcion.Name = "etiqueta_descripcion";
             etiqueta_descripcion.Size = new Size(290, 27);
             etiqueta_descripcion.TabIndex = 118;
@@ -417,7 +417,7 @@
             etiqueta_proyecto.AutoSize = true;
             etiqueta_proyecto.Font = new Font("Montserrat Medium", 15F, FontStyle.Bold);
             etiqueta_proyecto.ForeColor = Color.Black;
-            etiqueta_proyecto.Location = new Point(86, 302);
+            etiqueta_proyecto.Location = new Point(70, 302);
             etiqueta_proyecto.Name = "etiqueta_proyecto";
             etiqueta_proyecto.Size = new Size(247, 27);
             etiqueta_proyecto.TabIndex = 117;
@@ -430,7 +430,7 @@
             etiqueta_cliente.AutoSize = true;
             etiqueta_cliente.Font = new Font("Montserrat Medium", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             etiqueta_cliente.ForeColor = Color.Black;
-            etiqueta_cliente.Location = new Point(86, 232);
+            etiqueta_cliente.Location = new Point(70, 232);
             etiqueta_cliente.Name = "etiqueta_cliente";
             etiqueta_cliente.Size = new Size(225, 27);
             etiqueta_cliente.TabIndex = 135;
@@ -443,7 +443,7 @@
             titulo_editar.AutoSize = true;
             titulo_editar.Font = new Font("Montserrat SemiBold", 25.25F, FontStyle.Bold);
             titulo_editar.ForeColor = Color.Black;
-            titulo_editar.Location = new Point(294, 9);
+            titulo_editar.Location = new Point(278, 9);
             titulo_editar.Name = "titulo_editar";
             titulo_editar.Size = new Size(286, 47);
             titulo_editar.TabIndex = 146;
@@ -454,7 +454,7 @@
             linea_id.Anchor = AnchorStyles.Top;
             linea_id.BackColor = Color.FromArgb(0, 0, 32);
             linea_id.Enabled = false;
-            linea_id.Location = new Point(86, 148);
+            linea_id.Location = new Point(70, 148);
             linea_id.Margin = new Padding(3, 3, 3, 30);
             linea_id.Name = "linea_id";
             linea_id.Size = new Size(319, 1);
@@ -467,7 +467,7 @@
             entrada_id.BorderStyle = BorderStyle.None;
             entrada_id.Font = new Font("Montserrat", 15F);
             entrada_id.ForeColor = Color.FromArgb(144, 144, 144);
-            entrada_id.Location = new Point(86, 117);
+            entrada_id.Location = new Point(70, 117);
             entrada_id.Name = "entrada_id";
             entrada_id.Size = new Size(319, 25);
             entrada_id.TabIndex = 147;
@@ -481,63 +481,25 @@
             etiqueta_buscar.AutoSize = true;
             etiqueta_buscar.Font = new Font("Montserrat Medium", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             etiqueta_buscar.ForeColor = Color.Black;
-            etiqueta_buscar.Location = new Point(86, 87);
+            etiqueta_buscar.Location = new Point(70, 87);
             etiqueta_buscar.Name = "etiqueta_buscar";
             etiqueta_buscar.Size = new Size(58, 27);
             etiqueta_buscar.TabIndex = 149;
             etiqueta_buscar.Text = "#ID:";
             etiqueta_buscar.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // boton_confirmar
-            // 
-            boton_confirmar.Anchor = AnchorStyles.Top;
-            boton_confirmar.BackColor = Color.FromArgb(0, 0, 16);
-            boton_confirmar.Cursor = Cursors.Hand;
-            boton_confirmar.FlatAppearance.BorderSize = 0;
-            boton_confirmar.FlatAppearance.MouseDownBackColor = Color.FromArgb(204, 109, 0);
-            boton_confirmar.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 149, 0);
-            boton_confirmar.FlatStyle = FlatStyle.Flat;
-            boton_confirmar.Font = new Font("Montserrat", 14.25F, FontStyle.Bold);
-            boton_confirmar.ForeColor = Color.White;
-            boton_confirmar.Location = new Point(86, 775);
-            boton_confirmar.Margin = new Padding(3, 3, 3, 20);
-            boton_confirmar.Name = "boton_confirmar";
-            boton_confirmar.Size = new Size(319, 40);
-            boton_confirmar.TabIndex = 152;
-            boton_confirmar.Text = "Confirmar cambios";
-            boton_confirmar.UseVisualStyleBackColor = false;
-            // 
-            // boton_vaciar
-            // 
-            boton_vaciar.Anchor = AnchorStyles.Top;
-            boton_vaciar.BackColor = Color.FromArgb(0, 0, 16);
-            boton_vaciar.Cursor = Cursors.Hand;
-            boton_vaciar.FlatAppearance.BorderSize = 0;
-            boton_vaciar.FlatAppearance.MouseDownBackColor = Color.FromArgb(204, 109, 0);
-            boton_vaciar.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 149, 0);
-            boton_vaciar.FlatStyle = FlatStyle.Flat;
-            boton_vaciar.Font = new Font("Montserrat", 14.25F, FontStyle.Bold);
-            boton_vaciar.ForeColor = Color.White;
-            boton_vaciar.Location = new Point(476, 775);
-            boton_vaciar.Margin = new Padding(3, 3, 3, 20);
-            boton_vaciar.Name = "boton_vaciar";
-            boton_vaciar.Size = new Size(319, 40);
-            boton_vaciar.TabIndex = 153;
-            boton_vaciar.Text = "Vaciar datos";
-            boton_vaciar.UseVisualStyleBackColor = false;
-            // 
             // boton_buscar
             // 
             boton_buscar.Anchor = AnchorStyles.Top;
-            boton_buscar.BackColor = Color.FromArgb(0, 0, 16);
+            boton_buscar.BackColor = Color.FromArgb(150, 100, 50);
             boton_buscar.Cursor = Cursors.Hand;
             boton_buscar.FlatAppearance.BorderSize = 0;
-            boton_buscar.FlatAppearance.MouseDownBackColor = Color.FromArgb(204, 109, 0);
-            boton_buscar.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 149, 0);
+            boton_buscar.FlatAppearance.MouseDownBackColor = Color.FromArgb(120, 80, 40);
+            boton_buscar.FlatAppearance.MouseOverBackColor = Color.FromArgb(170, 120, 70);
             boton_buscar.FlatStyle = FlatStyle.Flat;
             boton_buscar.Font = new Font("Montserrat", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            boton_buscar.ForeColor = Color.White;
-            boton_buscar.Location = new Point(476, 111);
+            boton_buscar.ForeColor = Color.FromArgb(242, 225, 199);
+            boton_buscar.Location = new Point(460, 111);
             boton_buscar.Margin = new Padding(3, 3, 3, 30);
             boton_buscar.Name = "boton_buscar";
             boton_buscar.Size = new Size(319, 40);
@@ -551,7 +513,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Montserrat Medium", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(86, 180);
+            label2.Location = new Point(70, 180);
             label2.Name = "label2";
             label2.Size = new Size(268, 27);
             label2.TabIndex = 155;
@@ -564,7 +526,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Montserrat Medium", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(360, 180);
+            label3.Location = new Point(344, 180);
             label3.Name = "label3";
             label3.Size = new Size(110, 27);
             label3.TabIndex = 156;
@@ -579,6 +541,44 @@
             panel_pie.Size = new Size(916, 52);
             panel_pie.TabIndex = 157;
             // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Top;
+            button1.BackColor = Color.FromArgb(150, 100, 50);
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(120, 80, 40);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(170, 120, 70);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Montserrat", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.FromArgb(242, 225, 199);
+            button1.Location = new Point(70, 775);
+            button1.Margin = new Padding(3, 3, 3, 30);
+            button1.Name = "button1";
+            button1.Size = new Size(319, 40);
+            button1.TabIndex = 158;
+            button1.Text = "Confirmar cambios";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Top;
+            button2.BackColor = Color.FromArgb(150, 100, 50);
+            button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(120, 80, 40);
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(170, 120, 70);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Montserrat", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.FromArgb(242, 225, 199);
+            button2.Location = new Point(460, 775);
+            button2.Margin = new Padding(3, 3, 3, 30);
+            button2.Name = "button2";
+            button2.Size = new Size(319, 40);
+            button2.TabIndex = 159;
+            button2.Text = "Vaciar datos";
+            button2.UseVisualStyleBackColor = false;
+            // 
             // EditarProyecto
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
@@ -586,12 +586,12 @@
             AutoScroll = true;
             BackColor = Color.FromArgb(242, 225, 199);
             ClientSize = new Size(933, 742);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(panel_pie);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(boton_buscar);
-            Controls.Add(boton_vaciar);
-            Controls.Add(boton_confirmar);
             Controls.Add(etiqueta_buscar);
             Controls.Add(linea_id);
             Controls.Add(entrada_id);
@@ -671,11 +671,11 @@
         private Label etiqueta_buscar;
         private ComboBox comboBox1;
         private Label label1;
-        private Button boton_confirmar;
-        private Button boton_vaciar;
         private Button boton_buscar;
         private Label label2;
         private Label label3;
         private Panel panel_pie;
+        private Button button1;
+        private Button button2;
     }
 }

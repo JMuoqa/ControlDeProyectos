@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            boton_buscar = new Button();
             etiqueta_buscar = new Label();
             linea_id = new Panel();
             entrada_id = new TextBox();
@@ -46,28 +45,9 @@
             label5 = new Label();
             panel3 = new Panel();
             textBox1 = new TextBox();
-            boton_registrar = new Button();
+            button1 = new Button();
+            boton_buscar = new Button();
             SuspendLayout();
-            // 
-            // boton_buscar
-            // 
-            boton_buscar.Anchor = AnchorStyles.Top;
-            boton_buscar.BackColor = Color.FromArgb(0, 0, 16);
-            boton_buscar.Cursor = Cursors.Hand;
-            boton_buscar.FlatAppearance.BorderSize = 0;
-            boton_buscar.FlatAppearance.MouseDownBackColor = Color.FromArgb(204, 109, 0);
-            boton_buscar.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 149, 0);
-            boton_buscar.FlatStyle = FlatStyle.Flat;
-            boton_buscar.Font = new Font("Montserrat", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            boton_buscar.ForeColor = Color.White;
-            boton_buscar.Location = new Point(516, 104);
-            boton_buscar.Margin = new Padding(3, 3, 3, 30);
-            boton_buscar.Name = "boton_buscar";
-            boton_buscar.Size = new Size(319, 40);
-            boton_buscar.TabIndex = 158;
-            boton_buscar.Text = "Buscar";
-            boton_buscar.UseVisualStyleBackColor = false;
-            boton_buscar.Click += boton_buscar_Click;
             // 
             // etiqueta_buscar
             // 
@@ -85,7 +65,7 @@
             // linea_id
             // 
             linea_id.Anchor = AnchorStyles.Top;
-            linea_id.BackColor = Color.FromArgb(255, 149, 0);
+            linea_id.BackColor = Color.FromArgb(0, 0, 32);
             linea_id.Enabled = false;
             linea_id.Location = new Point(103, 143);
             linea_id.Margin = new Padding(3, 3, 3, 30);
@@ -134,7 +114,7 @@
             // linea_descripcion2
             // 
             linea_descripcion2.Anchor = AnchorStyles.Top;
-            linea_descripcion2.BackColor = Color.FromArgb(255, 149, 0);
+            linea_descripcion2.BackColor = Color.FromArgb(0, 0, 32);
             linea_descripcion2.Enabled = false;
             linea_descripcion2.Location = new Point(103, 438);
             linea_descripcion2.Margin = new Padding(3, 3, 3, 10);
@@ -145,7 +125,7 @@
             // linea_descripcion
             // 
             linea_descripcion.Anchor = AnchorStyles.Top;
-            linea_descripcion.BackColor = Color.FromArgb(255, 149, 0);
+            linea_descripcion.BackColor = Color.FromArgb(0, 0, 32);
             linea_descripcion.Enabled = false;
             linea_descripcion.Location = new Point(103, 287);
             linea_descripcion.Margin = new Padding(3, 3, 3, 10);
@@ -170,7 +150,7 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top;
-            panel1.BackColor = Color.FromArgb(255, 149, 0);
+            panel1.BackColor = Color.FromArgb(0, 0, 32);
             panel1.Enabled = false;
             panel1.Location = new Point(516, 438);
             panel1.Margin = new Padding(3, 3, 3, 10);
@@ -181,7 +161,7 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Top;
-            panel2.BackColor = Color.FromArgb(255, 149, 0);
+            panel2.BackColor = Color.FromArgb(0, 0, 32);
             panel2.Enabled = false;
             panel2.Location = new Point(516, 287);
             panel2.Margin = new Padding(3, 3, 3, 10);
@@ -258,7 +238,7 @@
             // panel3
             // 
             panel3.Anchor = AnchorStyles.Top;
-            panel3.BackColor = Color.FromArgb(255, 149, 0);
+            panel3.BackColor = Color.FromArgb(0, 0, 32);
             panel3.Enabled = false;
             panel3.Location = new Point(103, 526);
             panel3.Margin = new Padding(3, 3, 3, 30);
@@ -279,24 +259,43 @@
             textBox1.TabIndex = 172;
             textBox1.Text = "28-08-2025";
             // 
-            // boton_registrar
+            // button1
             // 
-            boton_registrar.Anchor = AnchorStyles.Top;
-            boton_registrar.BackColor = Color.FromArgb(0, 0, 16);
-            boton_registrar.Cursor = Cursors.Hand;
-            boton_registrar.FlatAppearance.BorderSize = 0;
-            boton_registrar.FlatAppearance.MouseDownBackColor = Color.FromArgb(204, 109, 0);
-            boton_registrar.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 149, 0);
-            boton_registrar.FlatStyle = FlatStyle.Flat;
-            boton_registrar.Font = new Font("Montserrat", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            boton_registrar.ForeColor = Color.White;
-            boton_registrar.Location = new Point(516, 489);
-            boton_registrar.Margin = new Padding(3, 3, 3, 30);
-            boton_registrar.Name = "boton_registrar";
-            boton_registrar.Size = new Size(319, 40);
-            boton_registrar.TabIndex = 175;
-            boton_registrar.Text = "Registrar";
-            boton_registrar.UseVisualStyleBackColor = false;
+            button1.Anchor = AnchorStyles.Top;
+            button1.BackColor = Color.FromArgb(150, 100, 50);
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(120, 80, 40);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(170, 120, 70);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Montserrat", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.FromArgb(242, 225, 199);
+            button1.Location = new Point(516, 106);
+            button1.Margin = new Padding(3, 3, 3, 30);
+            button1.Name = "button1";
+            button1.Size = new Size(319, 40);
+            button1.TabIndex = 176;
+            button1.Text = "Buscar";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // boton_buscar
+            // 
+            boton_buscar.Anchor = AnchorStyles.Top;
+            boton_buscar.BackColor = Color.FromArgb(150, 100, 50);
+            boton_buscar.Cursor = Cursors.Hand;
+            boton_buscar.FlatAppearance.BorderSize = 0;
+            boton_buscar.FlatAppearance.MouseDownBackColor = Color.FromArgb(120, 80, 40);
+            boton_buscar.FlatAppearance.MouseOverBackColor = Color.FromArgb(170, 120, 70);
+            boton_buscar.FlatStyle = FlatStyle.Flat;
+            boton_buscar.Font = new Font("Montserrat", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            boton_buscar.ForeColor = Color.FromArgb(242, 225, 199);
+            boton_buscar.Location = new Point(516, 489);
+            boton_buscar.Margin = new Padding(3, 3, 3, 30);
+            boton_buscar.Name = "boton_buscar";
+            boton_buscar.Size = new Size(319, 40);
+            boton_buscar.TabIndex = 177;
+            boton_buscar.Text = "Buscar";
+            boton_buscar.UseVisualStyleBackColor = false;
             // 
             // RegistrarError
             // 
@@ -304,7 +303,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(242, 225, 199);
             ClientSize = new Size(933, 742);
-            Controls.Add(boton_registrar);
+            Controls.Add(boton_buscar);
+            Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(panel3);
             Controls.Add(textBox1);
@@ -319,7 +319,6 @@
             Controls.Add(entrada_descripcion);
             Controls.Add(label1);
             Controls.Add(titulo_editar);
-            Controls.Add(boton_buscar);
             Controls.Add(etiqueta_buscar);
             Controls.Add(linea_id);
             Controls.Add(entrada_id);
@@ -333,8 +332,6 @@
         }
 
         #endregion
-
-        private Button boton_buscar;
         private Label etiqueta_buscar;
         private Panel linea_id;
         private TextBox entrada_id;
@@ -352,6 +349,7 @@
         private Label label5;
         private Panel panel3;
         private TextBox textBox1;
-        private Button boton_registrar;
+        private Button button1;
+        private Button boton_buscar;
     }
 }

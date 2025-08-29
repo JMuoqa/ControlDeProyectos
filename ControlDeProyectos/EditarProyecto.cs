@@ -25,7 +25,7 @@ namespace ControlDeProyectos
                 if (caja.ForeColor == Color.FromArgb(144, 144, 144) && caja.Text == listaDeEjemplos[i])
                 {
                     caja.Text = "";
-                    caja.ForeColor = Color.White;
+                    caja.ForeColor = Color.Black;
                     if (caja.Name == "entrada_precio")
                         caja.Text = "$";
                     else if (caja.Name == "entrada_pago")
@@ -36,7 +36,7 @@ namespace ControlDeProyectos
         private void TodasLasEntradasNormales_Leave(object sender, EventArgs e)
         {
             TextBox caja = sender as TextBox;
-            if (caja.ForeColor == Color.White && (string.IsNullOrEmpty(caja.Text) || caja.Text == "$"))
+            if (caja.ForeColor == Color.Black && (string.IsNullOrEmpty(caja.Text) || caja.Text == "$"))
             {
                 caja.ForeColor = Color.FromArgb(144, 144, 144);
                 if (caja.Name == "entrada_precio")
