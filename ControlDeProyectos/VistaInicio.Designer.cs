@@ -386,7 +386,7 @@
             // 
             logo_principal.Anchor = AnchorStyles.None;
             logo_principal.Image = (Image)resources.GetObject("logo_principal.Image");
-            logo_principal.Location = new Point(16, 30);
+            logo_principal.Location = new Point(12, 26);
             logo_principal.Name = "logo_principal";
             logo_principal.Size = new Size(54, 55);
             logo_principal.SizeMode = PictureBoxSizeMode.Zoom;
@@ -395,14 +395,16 @@
             // 
             // titulo_principal
             // 
+            titulo_principal.Anchor = AnchorStyles.None;
             titulo_principal.AutoSize = true;
             titulo_principal.Font = new Font("Montserrat", 30F, FontStyle.Bold);
             titulo_principal.ForeColor = Color.White;
-            titulo_principal.Location = new Point(76, 30);
+            titulo_principal.Location = new Point(72, 26);
             titulo_principal.Name = "titulo_principal";
             titulo_principal.Size = new Size(168, 55);
             titulo_principal.TabIndex = 4;
             titulo_principal.Text = "Muoqa";
+            titulo_principal.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // div_botones0
             // 

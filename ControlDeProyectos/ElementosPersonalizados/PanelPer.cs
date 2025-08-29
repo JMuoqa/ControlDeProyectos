@@ -12,18 +12,19 @@ namespace ControlDeProyectos.ElementosPersonalizados
 {
     public class PanelPer : Panel
     {
+        //El codigo salio de una configuracion para los botones. IMPORTANTE Probar si Panel necesita borde exterior.
         private int radioDelPanel  = 40;
         private int tamañoBordePanel = 0;
         Color colorDelPanel = Color.FromArgb(242, 225, 199);
-        private GraphicsPath GetFigurePath(RectangleF rect, float radius)
+        private GraphicsPath GetFigurePath(RectangleF rect, float radio)
         {
             GraphicsPath path = new GraphicsPath();
-            path.StartFigure();
+            path.StartFigure();//Se dibuja las rectas scon curvas
 
-            path.AddArc(rect.X, rect.Y, radius, radius, 180, 90);
-            path.AddArc(rect.Width - radius, rect.Y, radius, radius, 270, 90);
-            path.AddArc(rect.Width - radius, rect.Height - radius, radius, radius, 0, 90);
-            path.AddArc(rect.X, rect.Height - radius, radius, radius, 90, 90);
+            path.AddArc(rect.X, rect.Y, radio, radio, 180, 90);
+            path.AddArc(rect.Width - radio, rect.Y, radio, radio, 270, 90);
+            path.AddArc(rect.Width - radio, rect.Height - radio, radio, radio, 0, 90);
+            path.AddArc(rect.X, rect.Height - radio, radio, radio, 90, 90);
             path.CloseAllFigures();
             path.CloseFigure();
             return path;
@@ -36,11 +37,12 @@ namespace ControlDeProyectos.ElementosPersonalizados
             RectangleF rectBorde = new RectangleF(1, 1, this.Width - 0.8F, this.Height - 1);
             if(radioDelPanel > 2) // Boton redondo
             {
+                //Se usa using para liberar recursos
                 using (GraphicsPath pathSuper = GetFigurePath(rectSuper, radioDelPanel))
                 using (GraphicsPath pathBorde = GetFigurePath(rectBorde, radioDelPanel - 1f))
                 using (Pen penSuper = new Pen(this.Parent.BackColor,2))
                 using (Pen penBorde = new Pen(this.Parent.BackColor, tamañoBordePanel))
-                {
+                {   //Aca se dibuja el borde interior y exterior IMPORTANTE Probar si Panel necesita borde exterior.
                     penBorde.Alignment = PenAlignment.Inset;
                     this.Region = new Region(pathSuper);
                     e.Graphics.DrawPath(penSuper, pathSuper);

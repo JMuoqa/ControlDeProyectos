@@ -58,6 +58,7 @@
             entrada_precio = new TextBox();
             linea_pago = new Panel();
             entrada_pago = new TextBox();
+            boton_confirmar = new Button();
             SuspendLayout();
             // 
             // etiqueta_entrega
@@ -438,12 +439,32 @@
             entrada_pago.Enter += TodasLasEntradasNormales_Enter;
             entrada_pago.Leave += TodasLasEntradasNormales_Leave;
             // 
+            // boton_confirmar
+            // 
+            boton_confirmar.Anchor = AnchorStyles.Top;
+            boton_confirmar.BackColor = Color.FromArgb(0, 0, 16);
+            boton_confirmar.Cursor = Cursors.Hand;
+            boton_confirmar.FlatAppearance.BorderSize = 0;
+            boton_confirmar.FlatAppearance.MouseDownBackColor = Color.FromArgb(204, 109, 0);
+            boton_confirmar.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 149, 0);
+            boton_confirmar.FlatStyle = FlatStyle.Flat;
+            boton_confirmar.Font = new Font("Montserrat", 14.25F, FontStyle.Bold);
+            boton_confirmar.ForeColor = Color.White;
+            boton_confirmar.Location = new Point(503, 643);
+            boton_confirmar.Margin = new Padding(3, 3, 3, 20);
+            boton_confirmar.Name = "boton_confirmar";
+            boton_confirmar.Size = new Size(319, 40);
+            boton_confirmar.TabIndex = 153;
+            boton_confirmar.Text = "Confirmar cambios";
+            boton_confirmar.UseVisualStyleBackColor = false;
+            // 
             // AgregarProyecto
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(242, 225, 199);
             ClientSize = new Size(933, 742);
+            Controls.Add(boton_confirmar);
             Controls.Add(linea_pago);
             Controls.Add(entrada_pago);
             Controls.Add(linea_precio);
@@ -515,5 +536,6 @@
         private TextBox entrada_precio;
         private Panel linea_pago;
         private TextBox entrada_pago;
+        private Button boton_confirmar;
     }
 }
