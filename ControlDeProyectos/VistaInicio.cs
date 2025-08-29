@@ -21,6 +21,7 @@ namespace ControlDeProyectos
         {
             panelSubMenuAdministrar.Visible = false;
             panelSubMenuBusquedas.Visible = false;
+            panelSubMenuEstadisticas.Visible = false;
         }
 
         private void ActualizarSubMenus()
@@ -29,6 +30,8 @@ namespace ControlDeProyectos
                 panelSubMenuAdministrar.Visible = false;
             if (panelSubMenuBusquedas.Visible == true)
                 panelSubMenuBusquedas.Visible = false;
+            if (panelSubMenuEstadisticas.Visible == true)
+                panelSubMenuEstadisticas.Visible = false;
         }
 
         private void AbrirSubMenu(Panel subMenu)
@@ -51,6 +54,10 @@ namespace ControlDeProyectos
         {
             AbrirSubMenu(panelSubMenuBusquedas);
         }
+        private void boton_estadisticas_Click(object sender, EventArgs e)
+        {
+            AbrirSubMenu(panelSubMenuEstadisticas);
+        }
         #region SubMenuAdministrar
         private void boton_agregar_Click(object sender, EventArgs e)
         {
@@ -71,6 +78,14 @@ namespace ControlDeProyectos
         {
             RegistrarError registrarError = new RegistrarError();
             CambiarFormulario(registrarError);
+            //Arriba de esto iria codigo
+            ActualizarSubMenus();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DashBoard verEstadisticas = new DashBoard();
+            CambiarFormulario(verEstadisticas);
             //Arriba de esto iria codigo
             ActualizarSubMenus();
         }

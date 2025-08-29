@@ -7,19 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Drawing;
 namespace ControlDeProyectos
 {
-    public partial class RegistrarError : Form
+    public partial class DashBoard : Form
     {
-        public RegistrarError()
+        public DashBoard()
         {
             InitializeComponent();
-        }
-
-        private void boton_buscar_Click(object sender, EventArgs e)
-        {
-
+            
         }
     }
 }
